@@ -8,3 +8,4 @@ if __name__ == "__main__":
         total += int(sys.argv[i])
 
     print(total)
+    
