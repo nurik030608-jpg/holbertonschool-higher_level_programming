@@ -5,6 +5,10 @@ def element_at(my_list, idx):
         return None
     if idx >= list_length:
         return None
+<<<<<<< HEAD
     return my_list[idx]
 ~
 ~
+=======
+     return my_list[idx]
+>>>>>>> refs/remotes/origin/main
