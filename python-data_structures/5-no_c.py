@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def no_c(my_string):
     new_string = ""
     for char in my_string:
@@ -17,3 +18,4 @@ if __name__ == "__main__":
 
     test3 = "C is fun!"
     print(test_no_c(test3))
+
