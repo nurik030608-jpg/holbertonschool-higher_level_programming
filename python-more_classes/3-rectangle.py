@@ -1,4 +1,5 @@
-## 📏 Rectangle Class Definition
+"""Module 3-rectangle. Defines the Rectangle class.""" # <--- ADDED MODULE DOCSTRING HERE
+
 #!/usr/bin/python3
 class Rectangle:
     """
@@ -83,72 +84,3 @@ class Rectangle:
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
-
-    def __str__(self):
-        """
-        Returns a string representation of the rectangle using the character '#'.
-
-        Returns:
-            str: The graphical representation or an empty string if width or height is 0.
-        """
-        if self.__width == 0 or self.__height == 0:
-            return ""
-
-        # Build the rectangle representation
-        rectangle_str = ""
-        for i in range(self.__height):
-            rectangle_str += '#' * self.__width
-            if i < self.__height - 1:
-                rectangle_str += '\n'
-        return rectangle_str
-
-    def __repr__(self):
-        """
-        Returns a string representation of the object that can be used to recreate it.
-
-        Returns:
-            str: A string in the format "Rectangle(width, height)".
-        """
-        return f"Rectangle({self.__width}, {self.__height})"
-
-# --- Example Usage ---
-# The example below shows how the class works based on the requirements,
-# including the custom printing behavior.
-
-if __name__ == "__main__":
-    try:
-        my_rectangle = Rectangle(2, 4)
-        print("Rectangle:", my_rectangle)
-        print("---")
-        print(repr(my_rectangle))
-        print(f"Area: {my_rectangle.area()}")
-        print(f"Perimeter: {my_rectangle.perimeter()}")
-
-        print("\n--- Testing updates ---")
-        my_rectangle.width = 5
-        my_rectangle.height = 3
-        print("New Rectangle:", my_rectangle)
-        print(f"Area: {my_rectangle.area()}")
-        print(f"Perimeter: {my_rectangle.perimeter()}")
-
-        print("\n--- Testing zero dimensions ---")
-        zero_rect = Rectangle(0, 5)
-        print(f"Zero Rect (print): '{zero_rect}'") # Expected empty string
-        print(f"Zero Rect Area: {zero_rect.area()}")
-        print(f"Zero Rect Perimeter: {zero_rect.perimeter()}")
-        print(f"Zero Rect (repr): {repr(zero_rect)}")
-
-        print("\n--- Testing validation (should raise exceptions) ---")
-        try:
-            Rectangle(10, "5") # TypeError for height
-        except Exception as e:
-            print(f"Caught expected exception: {e}")
-
-        try:
-            my_rectangle.width = -1 # ValueError for width
-        except Exception as e:
-            print(f"Caught expected exception: {e}")
-
-    except Exception as e:
-        print(f"An unexpected error occurred: {e}")
-
