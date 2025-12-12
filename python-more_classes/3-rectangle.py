@@ -1,5 +1,5 @@
 ## 📏 Rectangle Class Definition
-
+#!/usr/bin/python3
 class Rectangle:
     """
     Defines a rectangle with private instance attributes for width and height.
@@ -151,3 +151,4 @@ if __name__ == "__main__":
 
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
+
