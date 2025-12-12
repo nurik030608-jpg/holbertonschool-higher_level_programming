@@ -3,9 +3,9 @@
 0-rectangle module
 This module defines an empty Rectangle class.
 """
+
 class Rectangle:
     """
-    An empty class that defines a rectangle.
-    It currently contains no attributes or methods.
+    An empty class representing a rectangle.
     """
-  pass    
+    pass  # Make sure 'pass' is indented with 4 spaces
