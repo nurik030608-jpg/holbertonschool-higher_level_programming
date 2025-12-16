@@ -13,6 +13,7 @@ class Rectangle:
     # Public class attribute 1: Tracks the number of live instances
     number_of_instances = 0
     # Public class attribute 2: Symbol used for string representation
+    # This default value is used unless overridden on an instance
     print_symbol = "#"
 
     def __init__(self, width=0, height=0):
@@ -71,14 +72,17 @@ class Rectangle:
     def __str__(self):
         """
         Returns a string representation of the rectangle using the character(s)
-        stored in the class attribute print_symbol.
+        stored in the class/instance attribute print_symbol.
         Returns an empty string if width or height is 0.
         """
         if self.__width == 0 or self.__height == 0:
             return ""
 
-        # Use the class attribute print_symbol for the representation
-        symbol = str(Rectangle.print_symbol) # Ensure symbol is a string for multiplication
+        # FIX: Access the symbol using 'self.print_symbol' to correctly 
+        # use the instance-specific symbol if one is set, otherwise fall
+        # back to the class symbol.
+        symbol = str(self.print_symbol) 
+        
         rect_str = ""
         for i in range(self.__height):
             rect_str += symbol * self.__width
