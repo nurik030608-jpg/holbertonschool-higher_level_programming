@@ -1,17 +1,17 @@
 #!/usr/bin/python3
 """
-Функция, которая возвращает список доступных атрибутов и методов объекта.
+Function that returns the list of available attributes and methods of an object.
 """
 
 def lookup(obj):
     """
-    Возвращает список атрибутов и методов объекта.
+    Returns a list of attributes and methods of an object.
 
     Args:
-        obj: Объект для инспектирования (проверки).
+        obj: The object (instance, class, or module) to inspect.
 
     Returns:
-        list: Список, содержащий имена атрибутов и методов.
+        list: A list containing the names of the attributes and methods.
     """
-    # Встроенная функция dir() возвращает список допустимых атрибутов объекта.
+    # The built-in dir() function is exactly what is needed for this task.
     return dir(obj)
