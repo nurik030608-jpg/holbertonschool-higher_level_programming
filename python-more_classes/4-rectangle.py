@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+This is a required module-level docstring.
+It describes the 4-rectangle module and the Rectangle class.
+"""
 class Rectangle:
     """
     Defines a rectangle with private attributes for width and height,
