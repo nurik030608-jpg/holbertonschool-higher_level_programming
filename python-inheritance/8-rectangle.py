@@ -3,7 +3,9 @@
 This module defines a class Rectangle that inherits from BaseGeometry.
 """
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
-
+"""
+This module defines the BaseGeometry class with an area method.
+"""
 
 class Rectangle(BaseGeometry):
     """
@@ -22,4 +24,5 @@ class Rectangle(BaseGeometry):
         self.integer_validator("height", height)
         self.__width = width
         self.__height = height
+
 
