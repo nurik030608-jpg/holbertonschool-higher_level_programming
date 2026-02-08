@@ -1,5 +1,6 @@
-
 #!/usr/bin/python3
+# Roman to Integer conversion module
+
 
 def roman_to_int(roman_string):
     """
@@ -21,11 +22,14 @@ def roman_to_int(roman_string):
     total = 0
     for i in range(len(roman_string)):
         current_val = roman_dict.get(roman_string[i], 0)
-        
+
         # Check if the next character exists and is greater than current
-        if i + 1 < len(roman_string) and roman_dict.get(roman_string[i+1], 0) > current_val:
+        next_val = roman_dict.get(roman_string[i + 1], 0) if i + 1 < \
+            len(roman_string) else 0
+
+        if next_val > current_val:
             total -= current_val
         else:
             total += current_val
-            
+
     return total
